@@ -1,0 +1,105 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffdfa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  background: #ff8fa3;
+  color: white;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Pages */
+.page {
+  margin-top: 2rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile styles */
+#menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #ff8fa3;
+    padding: 1rem 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    margin: 0.5rem 1rem;
+  }
+
+  #menu-toggle {
+    display: inline-block;
+  }
+}
