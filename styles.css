@@ -166,6 +166,29 @@ dialog nav a.active {
   color: var(--text-white);
 }
 
+.caption-bubble-left {
+  background: var(--background-cream);
+  border-radius: 1rem;
+  color: var(--text-black);
+  font-size: 1.2rem;
+  max-inline-size: 300px;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+/* Bubble tail */
+.caption-bubble-left::after {
+  content: "";
+  border: 15px solid transparent;
+  border-left: 0;
+  border-right-color: var(--background-cream);
+  display: block;
+  inline-size: 0;
+  inset-block-start: calc(50% - 15px);
+  inset-inline-start: -15px;
+  position: absolute;
+}
+
 .hidden {
   display: none;
 }
@@ -233,6 +256,19 @@ h1 .cursive {
     }
   }
 
+  .footer {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding-block: 2rem;
+
+    .footer-image {
+      max-inline-size: 200px;
+    }
+  }
+
+
 }
 
 /* Images */
@@ -294,5 +330,15 @@ footer {
       inline-size: 200px;
       padding: 2.5rem;
     }
+
+    .footer-image {
+      max-inline-size: 400px;
+    }
+  }
+
+  .caption-bubble-left {
+    font-size: 1.8rem;
+    max-inline-size: 400px;
+    padding: 2rem 2rem;
   }
 }
