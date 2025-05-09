@@ -5,21 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Friendship Pediatric Dentistry - Flossy Friends Academy</title>
   <link rel="stylesheet" href="styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="container">
-      <a href="#academy" data-page="academy">Friendship Pediatric Dentistry</a>
-      <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
-      <nav id="nav-menu">
-        <a href="#academy" data-page="academy">Flossy Friends Academy</a>
-				<a href="#dr-ayanna" data-page="dr-ayanna">Meet Dr. Ayanna</a>
-        <a href="#outreach" data-page="outreach">Community Outreach</a>
-      </nav>
-    </div>
+    <a class="logo" href="#academy" data-page="academy" aria-label="Friendship Pediatric Dentistry">
+			<img src="assets/logo.png" alt="Friendship Pediatric Dentistry with animated image of Dr. Ayanna smiling holding a happy tooth" />
+		</a>
+		<button id="menu-toggle" aria-haspopup="dialog" aria-controls="mobile-nav" aria-label="Open navigation">
+        ☰
+    </button>
+    <nav id="desktop-nav">
+      <a href="#academy" data-page="academy">Flossy Friends Academy</a>
+			<a href="#dr-ayanna" data-page="dr-ayanna">Meet Dr. Ayanna</a>
+      <a href="#outreach" data-page="outreach">Community Outreach</a>
+    </nav>
   </header>
 
-  <main class="container">
+	<dialog id="mobile-nav" aria-label="Navigation">
+    <button id="close-menu" aria-label="Close navigation">✕</button>
+    <nav>
+      <a href="#academy" data-page="academy">Flossy Friends Academy</a>
+			<a href="#dr-ayanna" data-page="dr-ayanna">Meet Dr. Ayanna</a>
+      <a href="#outreach" data-page="outreach">Community Outreach</a>
+    </nav>
+  </dialog>
+
+  <main>
+		<section id="academy" class="page hidden">
+			<div class="container red">
+				<h1>Welcome to <span class="cursive">flossy</span> friends academy</h1>
+				<img class="hero" src="assets/9.png" alt="Photos of children with Dr. Ayanna learning about dentistry" />
+      	<p>Flossy Friends Academy is a fun, hands-on program created by Dr. Ayanna and the team at Friendship Pediatric Dentistry designed to introduce 5th–8th grade girls to the exciting world of dentistry.</p>
+				<p>Through engaging activities, real-life demonstrations, and inspiring conversations, participants will explore the many dental careers that keep our smiles healthy including dentists, dental hygienists, and dental assistants.</p>
+			</div>
+			<div class="coral">
+				<dl class="container">
+					<div class="card">
+						<dt>Our Mission:</dt>
+						<dd>Dr. Ayanna and her team believe that when girls see what’s possible, they start to dream bigger. Flossy Friends Academy was created to spark curiosity, build leadership, and encourage young girls, especially those from underrepresented communities, to consider a future in dentistry and oral health.</dd>
+					</div>
+					<div class="card">
+						<dt>What We Do:</dt>
+						<dd>During this free enrichment program, students will get a behind-the-scenes look at the dental world through interactive lessons and mentorship from real dental professionals. Each session is packed with discovery, skill-building, and fun.</dd>
+					</div>
+					<div class="card">
+						<dt>Why It Matters:</dt>
+						<dd>The earlier girls get exposure to healthcare careers, the more likely they are to pursue them. At Flossy Friends Academy, we make that introduction memorable, empowering, and full of joy.</dd>
+					</div>
+				</dl>
+			</div>
+			<div class="container red">
+				<img src="assets/10.png" alt="Animation of smiling toothpaste, toothbrush and floss" />
+				<p>“Smiles are brighter with FRIENDS!”</p>
+			</div>
+		</section>
+
     <section id="dr-ayanna" class="page">
 			<img src="assets/1.png" alt="Friendship Pediatric Dentistry with animated image of Dr. Ayanna smiling holding a happy tooth" />
 			<p>Partnering with families and oral health care providers to maintain healthy, growing pediatric smiles - because smiles are brighter with friends!</p>
@@ -59,24 +102,6 @@
 			<p>“I expand access to care, advocate for kids, and train the next generation to do the same” - Dr. Ayanna</p>
 			<img src="assets/5.png" alt="Dr. Ayanna wearing a mask and scrubs" />
     </section>
-
-    <section id="academy" class="page hidden">
-      <h1>Welcome to flossy friends academy</h1>
-			<img src="assets/9.png" alt="Photos of children with Dr. Ayanna learning about dentistry" />
-      <p>Flossy Friends Academy is a fun, hands-on program created by Dr. Ayanna and the team at Friendship Pediatric Dentistry designed to introduce 5th–8th grade girls to the exciting world of dentistry.</p>
-			<p>Through engaging activities, real-life demonstrations, and inspiring conversations, participants will explore the many dental careers that keep our smiles healthy including dentists, dental hygienists, and dental assistants.</p>
-			<dl>
-				<dt>Our Mission:</dt>
-				<dd>Dr. Ayanna and her team believe that when girls see what’s possible, they start to dream bigger. Flossy Friends Academy was created to spark curiosity, build leadership, and encourage young girls, especially those from underrepresented communities, to consider a future in dentistry and oral health.</dd>
-				<dt>What We Do:</dt>
-				<dd>During this free enrichment program, students will get a behind-the-scenes look at the dental world through interactive lessons and mentorship from real dental professionals. Each session is packed with discovery, skill-building, and fun.</dd>
-				<dt>Why It Matters:</dt>
-				<dd>The earlier girls get exposure to healthcare careers, the more likely they are to pursue them. At Flossy Friends Academy, we make that introduction memorable, empowering, and full of joy.</dd>
-			</dl>
-			<p>Ready to start the journey toward becoming a smile cheerleader and maybe even a future dentist?</p>
-			<img src="assets/10.png" alt="Animation of smiling toothpaste, toothbrush and floss" />
-			<p>“Smiles are brighter with FRIENDS!”</p>
-		</section>
 
     <section id="outreach" class="page hidden">
       <h1>Community Outreach</h1>

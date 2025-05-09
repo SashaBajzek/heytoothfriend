@@ -5,49 +5,72 @@ const pageTitles = {
 };
 
 function showPage(page) {
-  // Hide all sections
   document.querySelectorAll('.page').forEach(section => {
     section.classList.add('hidden');
   });
 
-  // Show the target section
   const target = document.getElementById(page);
-  if (target) {
-    target.classList.remove('hidden');
-  }
+  if (target) target.classList.remove('hidden');
 
-  // Update active link
   document.querySelectorAll('nav a').forEach(link => {
     link.classList.toggle('active', link.dataset.page === page);
   });
 
-  // Update title
-  const titleSuffix = pageTitles[page] || 'Friendship Pediatric Dentistry';
-  document.title = `Friendship Pediatric Dentistry - ${titleSuffix}`;
-
-  // Close mobile menu
-  document.getElementById('nav-menu').classList.remove('show');
+  document.title = `Hey Tooth Friend - ${pageTitles[page] || ''}`;
 }
 
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    const page = event.target.dataset.page;
-    location.hash = page;
-  });
-});
-
+// Hash change
 window.addEventListener('hashchange', () => {
   const page = location.hash.replace('#', '') || 'dr-ayanna';
   showPage(page);
 });
 
+// Initial load
 window.addEventListener('DOMContentLoaded', () => {
-  const initialPage = location.hash.replace('#', '') || 'dr-ayanna';
-  showPage(initialPage);
+  const page = location.hash.replace('#', '') || 'dr-ayanna';
+  showPage(page);
+});
+
+// Link click
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const page = e.target.dataset.page;
+    location.hash = page;
+
+    // Close mobile nav if open
+    const dialog = document.getElementById('mobile-nav');
+    if (dialog.open) dialog.close();
+  });
 });
 
 // Mobile nav toggle
-document.getElementById('menu-toggle').addEventListener('click', () => {
-  document.getElementById('nav-menu').classList.toggle('show');
+const menuToggle = document.getElementById('menu-toggle');
+const mobileNav = document.getElementById('mobile-nav');
+const closeMenu = document.getElementById('close-menu');
+
+menuToggle.addEventListener('click', () => {
+  mobileNav.showModal();
+});
+
+closeMenu.addEventListener('click', () => {
+  mobileNav.close();
+});
+
+// Trap focus inside dialog for accessibility
+mobileNav.addEventListener('keydown', (e) => {
+  if (e.key === 'Tab') {
+    const focusable = [...mobileNav.querySelectorAll('a, button')];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  } else if (e.key === 'Escape') {
+    mobileNav.close();
+  }
 });
