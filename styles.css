@@ -3,10 +3,12 @@
   --background-coral: rgb(237, 105, 90);
   --background-cream: rgb(251, 239, 213);
   --background-green: rgb(153, 150, 107);
+  --background-olive: rgb(70, 62, 30);
 	--text-white: rgb(255, 250, 228);
   --text-red: rgb(142, 25, 33);
   --text-coral: rgb(237, 105, 90);
 	--text-black: black;
+  --text-olive: rgb(70, 62, 30);
 }
 
 
@@ -27,7 +29,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding-block: 4rem;
 }
 
 /* Header */
@@ -166,7 +168,16 @@ dialog nav a.active {
   color: var(--text-white);
 }
 
-.caption-bubble-left {
+.olive {
+  background-color: var(--background-olive);
+  color: var(--text-black);
+}
+
+  .bold {
+    font-weight: bold;
+  }
+
+.caption-bubble {
   background: var(--background-cream);
   border-radius: 1rem;
   color: var(--text-black);
@@ -189,24 +200,27 @@ dialog nav a.active {
   position: absolute;
 }
 
+.caption-bubble-right::after {
+  content: "";
+  border: 15px solid transparent;
+  border-right: 0;
+  border-left-color: var(--background-cream);
+  display: block;
+  inline-size: 0;
+  inset-block-start: calc(50% - 15px);
+  inset-inline-end: -15px;
+  position: absolute;
+}
+
 .hidden {
   display: none;
 }
 
-h1 {
-  color: var(--text-white);
+h1, h2 {
   font-family: "Montserrat", cursive;
   font-size: 2rem;
+  padding-block-end: 2rem;
   text-align: center;
-  text-shadow:
-        -4px -4px 0 var(--text-coral),
-         4px -4px 0 var(--text-coral),
-        -4px  4px 0 var(--text-coral),
-         4px  4px 0 var(--text-coral),
-        -4px  0px 0 var(--text-coral),
-         4px  0px 0 var(--text-coral),
-         0px -4px 0 var(--text-coral),
-         0px  4px 0 var(--text-coral);
 }
 
 h1 .cursive {
@@ -218,6 +232,19 @@ h1 .cursive {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+
+  h1 {
+    color: var(--text-white);
+    text-shadow:
+        -4px -4px 0 var(--text-coral),
+         4px -4px 0 var(--text-coral),
+        -4px  4px 0 var(--text-coral),
+         4px  4px 0 var(--text-coral),
+        -4px  0px 0 var(--text-coral),
+         4px  0px 0 var(--text-coral),
+         0px -4px 0 var(--text-coral),
+         0px  4px 0 var(--text-coral);
+  }
 
   .hero {
     max-inline-size: 100%;
@@ -271,6 +298,101 @@ h1 .cursive {
 
 }
 
+#dr-ayanna {
+  .hero {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+
+    img {
+      max-inline-size: 100%;
+      padding-block-end: 1rem;
+    }
+  }
+
+  h1 {
+    color: var(--text-coral);
+    text-shadow:
+        -4px -4px 0 var(--text-red),
+         4px -4px 0 var(--text-red),
+        -4px  4px 0 var(--text-red),
+         4px  4px 0 var(--text-red),
+        -4px  0px 0 var(--text-red),
+         4px  0px 0 var(--text-red),
+         0px -4px 0 var(--text-red),
+         0px  4px 0 var(--text-red);
+  }
+
+  .coral {
+    padding-block: 4rem;
+
+    .container.card {
+      background-color: var(--background-cream);
+      border-radius: 1rem;
+      color: var(--text-black);
+      padding: 4rem;
+
+    img {
+      float: left;
+      max-inline-size: 220px;
+      padding-block-end: 2rem;
+      padding-inline-end: 2rem;
+    }
+
+    p {
+      padding-block: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .opener {
+      color: var(--text-red);
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 36px;
+    }
+
+    .quote {
+      color: var(--text-red);
+      font-style: italic;
+      text-align: center;
+    }
+  }
+  }
+
+  .green .container {
+    h2 {
+    color: var(--text-white);
+    text-shadow:
+        -4px -4px 0 var(--text-olive),
+         4px -4px 0 var(--text-olive),
+        -4px  4px 0 var(--text-olive),
+         4px  4px 0 var(--text-olive),
+        -4px  0px 0 var(--text-olive),
+         4px  0px 0 var(--text-olive),
+         0px -4px 0 var(--text-olive),
+         0px  4px 0 var(--text-olive);
+  }
+
+  .opener {
+      color: var(--text-olive);
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 36px;
+    }
+  }
+
+  .olive .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: 0;
+
+    img {
+      max-inline-size: 400px;
+    }
+  }
+}
+
 /* Images */
 .profile-photo {
   max-width: 200px;
@@ -313,7 +435,7 @@ footer {
     display: none !important;
   }
 
-  h1 {
+  h1, h2 {
     font-size: 4rem;
   }
 }
@@ -341,4 +463,13 @@ footer {
     max-inline-size: 400px;
     padding: 2rem 2rem;
   }
+
+  #dr-ayanna {
+  .hero {
+    font-size: 2rem;
+    padding-block-end: 2rem;
+  }
+
+
+}
 }
