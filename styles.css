@@ -1,16 +1,15 @@
 :root {
-  --background-red:rgb(142, 25, 33);
+  --background-red: rgb(142, 25, 33);
   --background-coral: rgb(237, 105, 90);
   --background-cream: rgb(251, 239, 213);
   --background-green: rgb(153, 150, 107);
   --background-olive: rgb(70, 62, 30);
-	--text-white: rgb(255, 250, 228);
+  --text-white: rgb(255, 250, 228);
   --text-red: rgb(142, 25, 33);
   --text-coral: rgb(237, 105, 90);
-	--text-black: black;
+  --text-black: black;
   --text-olive: rgb(70, 62, 30);
 }
-
 
 /* Reset + Base */
 * {
@@ -20,7 +19,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: var(--background-red);
   color: #333;
   line-height: 1.6;
@@ -173,9 +172,9 @@ dialog nav a.active {
   color: var(--text-black);
 }
 
-  .bold {
-    font-weight: bold;
-  }
+.bold {
+  font-weight: bold;
+}
 
 .caption-bubble {
   background: var(--background-cream);
@@ -189,7 +188,7 @@ dialog nav a.active {
 
 /* Bubble tail */
 .caption-bubble-left::after {
-  content: "";
+  content: '';
   border: 15px solid transparent;
   border-left: 0;
   border-right-color: var(--background-cream);
@@ -201,7 +200,7 @@ dialog nav a.active {
 }
 
 .caption-bubble-right::after {
-  content: "";
+  content: '';
   border: 15px solid transparent;
   border-right: 0;
   border-left-color: var(--background-cream);
@@ -216,15 +215,16 @@ dialog nav a.active {
   display: none;
 }
 
-h1, h2 {
-  font-family: "Montserrat", cursive;
+h1,
+h2 {
+  font-family: 'Montserrat', cursive;
   font-size: 2rem;
   padding-block-end: 2rem;
   text-align: center;
 }
 
 h1 .cursive {
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
 }
 
 #academy {
@@ -236,14 +236,14 @@ h1 .cursive {
   h1 {
     color: var(--text-white);
     text-shadow:
-        -4px -4px 0 var(--text-coral),
-         4px -4px 0 var(--text-coral),
-        -4px  4px 0 var(--text-coral),
-         4px  4px 0 var(--text-coral),
-        -4px  0px 0 var(--text-coral),
-         4px  0px 0 var(--text-coral),
-         0px -4px 0 var(--text-coral),
-         0px  4px 0 var(--text-coral);
+      -4px -4px 0 var(--text-coral),
+      4px -4px 0 var(--text-coral),
+      -4px 4px 0 var(--text-coral),
+      4px 4px 0 var(--text-coral),
+      -4px 0px 0 var(--text-coral),
+      4px 0px 0 var(--text-coral),
+      0px -4px 0 var(--text-coral),
+      0px 4px 0 var(--text-coral);
   }
 
   .hero {
@@ -294,8 +294,6 @@ h1 .cursive {
       max-inline-size: 200px;
     }
   }
-
-
 }
 
 #dr-ayanna {
@@ -313,14 +311,14 @@ h1 .cursive {
   h1 {
     color: var(--text-coral);
     text-shadow:
-        -4px -4px 0 var(--text-red),
-         4px -4px 0 var(--text-red),
-        -4px  4px 0 var(--text-red),
-         4px  4px 0 var(--text-red),
-        -4px  0px 0 var(--text-red),
-         4px  0px 0 var(--text-red),
-         0px -4px 0 var(--text-red),
-         0px  4px 0 var(--text-red);
+      -4px -4px 0 var(--text-red),
+      4px -4px 0 var(--text-red),
+      -4px 4px 0 var(--text-red),
+      4px 4px 0 var(--text-red),
+      -4px 0px 0 var(--text-red),
+      4px 0px 0 var(--text-red),
+      0px -4px 0 var(--text-red),
+      0px 4px 0 var(--text-red);
   }
 
   .coral {
@@ -332,48 +330,48 @@ h1 .cursive {
       color: var(--text-black);
       padding: 4rem;
 
-    img {
-      float: left;
-      max-inline-size: 220px;
-      padding-block-end: 2rem;
-      padding-inline-end: 2rem;
-    }
+      img {
+        float: left;
+        max-inline-size: 220px;
+        padding-block-end: 2rem;
+        padding-inline-end: 2rem;
+      }
 
-    p {
-      padding-block: 1rem;
-      font-size: 1.2rem;
-    }
+      p {
+        padding-block: 1rem;
+        font-size: 1.2rem;
+      }
 
-    .opener {
-      color: var(--text-red);
-      font-size: 1.5rem;
-      font-weight: bold;
-      line-height: 36px;
-    }
+      .opener {
+        color: var(--text-red);
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 36px;
+      }
 
-    .quote {
-      color: var(--text-red);
-      font-style: italic;
-      text-align: center;
+      .quote {
+        color: var(--text-red);
+        font-style: italic;
+        text-align: center;
+      }
     }
-  }
   }
 
   .green .container {
     h2 {
-    color: var(--text-white);
-    text-shadow:
+      color: var(--text-white);
+      text-shadow:
         -4px -4px 0 var(--text-olive),
-         4px -4px 0 var(--text-olive),
-        -4px  4px 0 var(--text-olive),
-         4px  4px 0 var(--text-olive),
-        -4px  0px 0 var(--text-olive),
-         4px  0px 0 var(--text-olive),
-         0px -4px 0 var(--text-olive),
-         0px  4px 0 var(--text-olive);
-  }
+        4px -4px 0 var(--text-olive),
+        -4px 4px 0 var(--text-olive),
+        4px 4px 0 var(--text-olive),
+        -4px 0px 0 var(--text-olive),
+        4px 0px 0 var(--text-olive),
+        0px -4px 0 var(--text-olive),
+        0px 4px 0 var(--text-olive);
+    }
 
-  .opener {
+    .opener {
       color: var(--text-olive);
       font-size: 1.5rem;
       font-weight: bold;
@@ -391,9 +389,9 @@ h1 .cursive {
       padding: 2rem;
 
       img.profile {
-          inline-size: 200px;
-          margin-inline: auto;
-          margin-block-end: 2rem;
+        inline-size: 200px;
+        margin-inline: auto;
+        margin-block-end: 2rem;
       }
 
       ul {
@@ -460,8 +458,14 @@ footer {
 
 /* Fade Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Desktop enhancement */
@@ -480,7 +484,8 @@ footer {
     display: none !important;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 4rem;
   }
 }
@@ -510,41 +515,41 @@ footer {
   }
 
   #dr-ayanna {
-  .hero {
-    font-size: 2rem;
-    padding-block-end: 2rem;
-  }
+    .hero {
+      font-size: 2rem;
+      padding-block-end: 2rem;
+    }
 
-  .green .container{
-    .card {
-      flex-direction: row;
-      padding: 1rem;
+    .green .container {
+      .card {
+        flex-direction: row;
+        padding: 1rem;
 
-      img.profile {
-        inline-size: 240px;
-        margin: 0;
-        margin-inline-end: 2rem;
-      }
+        img.profile {
+          inline-size: 240px;
+          margin: 0;
+          margin-inline-end: 2rem;
+        }
 
-      ul {
-        font-size: 2rem;
-        line-height: 2.2rem;
-        padding-block: 1rem;
+        ul {
+          font-size: 2rem;
+          line-height: 2.2rem;
+          padding-block: 1rem;
 
-        li {
-          img {
-            inline-size: 2rem;
+          li {
+            img {
+              inline-size: 2rem;
+            }
           }
         }
-  }}
-}
+      }
+    }
 
-.olive .container {
-  padding-block-end: 0;
-    img {
-      max-inline-size: 400px;
+    .olive .container {
+      padding-block-end: 0;
+      img {
+        max-inline-size: 400px;
+      }
     }
   }
-
-}
 }

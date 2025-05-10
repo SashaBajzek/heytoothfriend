@@ -1,18 +1,18 @@
 const pageTitles = {
   'dr-ayanna': 'Meet Dr. Ayanna',
-  'academy': 'Flossy Friends Academy',
-  'outreach': 'Community Outreach'
+  academy: 'Flossy Friends Academy',
+  outreach: 'Community Outreach',
 };
 
 function showPage(page) {
-  document.querySelectorAll('.page').forEach(section => {
+  document.querySelectorAll('.page').forEach((section) => {
     section.classList.add('hidden');
   });
 
   const target = document.getElementById(page);
   if (target) target.classList.remove('hidden');
 
-  document.querySelectorAll('nav a').forEach(link => {
+  document.querySelectorAll('nav a').forEach((link) => {
     link.classList.toggle('active', link.dataset.page === page);
   });
 
@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Link click
-document.querySelectorAll('nav a').forEach(link => {
+document.querySelectorAll('nav a').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const page = e.target.dataset.page;
