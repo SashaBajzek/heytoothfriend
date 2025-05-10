@@ -29,6 +29,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding-block: 4rem;
+  padding-inline: 2rem;
 }
 
 /* Header */
@@ -436,6 +437,54 @@ h1 .cursive {
   }
 }
 
+#outreach {
+  .olive .container {
+    color: var(--text-white);
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    h1 {
+      color: var(--text-white);
+      text-shadow:
+        -4px -4px 0 var(--text-coral),
+        4px -4px 0 var(--text-coral),
+        -4px 4px 0 var(--text-coral),
+        4px 4px 0 var(--text-coral),
+        -4px 0px 0 var(--text-coral),
+        4px 0px 0 var(--text-coral),
+        0px -4px 0 var(--text-coral),
+        0px 4px 0 var(--text-coral);
+    }
+
+    .opener {
+      padding-block: 1rem;
+      text-align: center;
+    }
+
+    .row-group > :first-child,
+    .row-group > :last-child {
+      flex-direction: column-reverse;
+    }
+
+    .row {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-block: 1rem;
+
+      img {
+        max-inline-size: 240px;
+      }
+
+      p {
+        padding-block: 1rem;
+      }
+    }
+  }
+}
+
 /* Images */
 .profile-photo {
   max-width: 200px;
@@ -492,6 +541,12 @@ footer {
 
 /* Desktop enhancement */
 @media (min-width: 1000px) {
+  .caption-bubble-left {
+    font-size: 1.8rem;
+    max-inline-size: 400px;
+    padding: 2rem 2rem;
+  }
+
   #academy {
     dl {
       flex-direction: row;
@@ -506,12 +561,6 @@ footer {
     .footer-image {
       max-inline-size: 400px;
     }
-  }
-
-  .caption-bubble-left {
-    font-size: 1.8rem;
-    max-inline-size: 400px;
-    padding: 2rem 2rem;
   }
 
   #dr-ayanna {
@@ -551,5 +600,36 @@ footer {
         max-inline-size: 400px;
       }
     }
+  }
+
+  #outreach .olive .container {
+    .row-group > :first-child,
+    .row-group > :last-child {
+      flex-direction: row;
+    }
+
+    .row {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-block: 1rem;
+
+      img {
+        max-inline-size: 350px;
+      }
+
+      p {
+        padding-block: 1rem;
+      }
+    }
+  }
+}
+
+/* Desktop enhancement */
+@media (min-width: 1260px) {
+  .container {
+    padding-inline: 0;
   }
 }
