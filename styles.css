@@ -21,7 +21,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--background-red);
-  color: #333;
+  color: var(--text-black);
   line-height: 1.6;
 }
 

@@ -41,6 +41,9 @@ document.querySelectorAll('nav a').forEach((link) => {
     // Close mobile nav if open
     const dialog = document.getElementById('mobile-nav');
     if (dialog.open) dialog.close();
+
+    // Scroll to the top
+    window.scrollTo(0, 0);
   });
 });
 
