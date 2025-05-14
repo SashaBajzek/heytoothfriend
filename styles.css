@@ -149,7 +149,6 @@ dialog nav a.active {
 
 /* Pages */
 .page {
-  margin-top: 2rem;
   animation: fadeIn 0.3s ease-in-out;
 }
 
