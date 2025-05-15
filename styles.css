@@ -29,7 +29,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding-block: 4rem;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
 }
 
 /* Header */
@@ -219,14 +219,13 @@ dialog nav a.active {
 
 h1,
 h2 {
-  font-family: 'Montserrat', cursive;
-  font-size: 2rem;
-  padding-block-end: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-h1 .cursive {
-  font-family: 'Pacifico', cursive;
+h1 img,
+h2 img {
+  inline-size: 100%;
 }
 
 #academy {
@@ -234,19 +233,6 @@ h1 .cursive {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-
-  h1 {
-    color: var(--text-white);
-    text-shadow:
-      -4px -4px 0 var(--text-coral),
-      4px -4px 0 var(--text-coral),
-      -4px 4px 0 var(--text-coral),
-      4px 4px 0 var(--text-coral),
-      -4px 0px 0 var(--text-coral),
-      4px 0px 0 var(--text-coral),
-      0px -4px 0 var(--text-coral),
-      0px 4px 0 var(--text-coral);
-  }
 
   .hero {
     max-inline-size: 100%;
@@ -308,19 +294,6 @@ h1 .cursive {
       max-inline-size: 100%;
       padding-block-end: 1rem;
     }
-  }
-
-  h1 {
-    color: var(--text-coral);
-    text-shadow:
-      -4px -4px 0 var(--text-red),
-      4px -4px 0 var(--text-red),
-      -4px 4px 0 var(--text-red),
-      4px 4px 0 var(--text-red),
-      -4px 0px 0 var(--text-red),
-      4px 0px 0 var(--text-red),
-      0px -4px 0 var(--text-red),
-      0px 4px 0 var(--text-red);
   }
 
   .coral {
@@ -444,19 +417,6 @@ h1 .cursive {
     font-size: 1.2rem;
     font-weight: bold;
 
-    h1 {
-      color: var(--text-white);
-      text-shadow:
-        -4px -4px 0 var(--text-coral),
-        4px -4px 0 var(--text-coral),
-        -4px 4px 0 var(--text-coral),
-        4px 4px 0 var(--text-coral),
-        -4px 0px 0 var(--text-coral),
-        4px 0px 0 var(--text-coral),
-        0px -4px 0 var(--text-coral),
-        0px 4px 0 var(--text-coral);
-    }
-
     .opener {
       padding-block: 1rem;
       text-align: center;
@@ -533,11 +493,6 @@ footer {
   dialog#mobile-nav {
     display: none !important;
   }
-
-  h1,
-  h2 {
-    font-size: 4rem;
-  }
 }
 
 /* Desktop enhancement */
@@ -546,6 +501,11 @@ footer {
     font-size: 1.8rem;
     max-inline-size: 400px;
     padding: 2rem 2rem;
+  }
+
+  h1 img,
+  h2 img {
+    inline-size: 80%;
   }
 
   #academy {
