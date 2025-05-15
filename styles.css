@@ -296,6 +296,13 @@ h2 img {
     }
   }
 
+  h1 {
+    padding-block-end: 1rem;
+    img {
+      inline-size: 90%;
+    }
+  }
+
   .coral {
     padding-block: 4rem;
 
@@ -305,7 +312,7 @@ h2 img {
       color: var(--text-black);
       padding: 4rem;
 
-      img {
+      img.profile-img {
         float: left;
         max-inline-size: 220px;
         padding-block-end: 2rem;
@@ -528,6 +535,10 @@ footer {
     .hero {
       font-size: 2rem;
       padding-block-end: 2rem;
+    }
+
+    h1 img {
+      inline-size: 60%;
     }
 
     .green .container {
