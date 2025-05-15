@@ -519,7 +519,7 @@ footer {
 }
 
 /* Desktop enhancement */
-@media (min-width: 800px) {
+@media (min-width: 840px) {
   #desktop-nav {
     display: flex;
     flex-direction: row;
